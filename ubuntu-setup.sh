@@ -36,9 +36,6 @@ function installNode() {
             echo "stop"
             exit 1
         fi
-    else
-        echo "stop"
-        exit 1
     fi
     nodebrew ls-all
     echo "What version do you want to install?(ex:v6.4.0/latest)"
@@ -66,9 +63,9 @@ function main() {
         1 ) 
             initSetup ;;
         2 ) 
-            func ;;
+            installNode ;;
         3 ) 
-            Non ;;
+            func ;;
         * ) break ;;
         esac
     done
